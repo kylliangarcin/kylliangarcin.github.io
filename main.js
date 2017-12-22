@@ -37,6 +37,7 @@ $(function()
     LinkPopupBackground = document.getElementById("NavLinkBackground");
 
     AnimTogglePopupLink(true);
+    AnimToggleMenu();
 
     window.setInterval(OnDraw, 1 / 60);
 
