@@ -1,0 +1,71 @@
+<!DOCTYPE html5>
+<html>
+    <head>
+        <title>Bievenue sur le site de la 2SEN au Lycée Flesselles</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf8"/>
+        <link 
+        href="./css/font-awesome.css" 
+        rel="stylesheet"  type='text/css'>
+        <link rel="stylesheet" media="screen" type="text/css" href="maincss.css"/>
+        <link href="https://fonts.googleapis.com/css?family=Barlow+Semi+Condensed:500,900|Spectral+SC:400,700" rel="stylesheet">
+
+        <!-- Ajout des fichiers scripts important (le script du site et JQuery) -->
+        <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>-->
+        <script src="external/jquery/jquery.js"></script>
+        <script src="jquery-ui.js"></script>
+        <script src="jquery.transit.min.js"></script>
+        <script src="./main.js"></script>  
+    </head>
+    <body>
+        <div class="DivContent">
+            <div class="DivContentWeb">
+                <iframe id="content_iframe" class="ContentIFrame" src="./pages/presentation.html"> 
+                </iframe>   
+            </div>      
+            <div class="DivMenuTop">
+                <p id="logotop" class="DivLogoTop unselectable"> Présentation</p>
+                <div class="divmenu">
+                    <!-- Partie gauche (pour le menu) -->
+                    <p id="LabelMenuIcon" class="fa divmenubutton fa-align-justify" onclick="$(this).HTMLToggleMenu()"></p>
+                    <p id="LabelMenuTitle" class="divmenulabel unselectable noevent">MENU</p>
+
+                    <!-- Partie droite (pour montrer les liens) -->
+                    <p id="LabelLinksIcon" class="fa divmenubutton linksmenu fa-link" onclick="$(this).HTMLToggleLinkPopup()"></p>                
+                </div>
+                <!--<div class="DivLogoTop"></div>-->
+                <!--<div class="DivMenuTopShadow unselectable"></div>  Enlevé pour des raisons esthétique -->
+                <div id="navmenutop" class="DivNavTop">
+                    <div class="MenuButton" onclick="$(this).HTMLSetPage(0)">
+                        <p class="unselectable MenuButtonLabel">Présentation</p>
+                        <div class="DivButtonEnd"></div>
+                    </div>
+                    <div class="MenuButton" onclick="$(this).HTMLSetPage(1)">
+                        <p class="unselectable MenuButtonLabel">Horaires</p>
+                        <div class="DivButtonEnd"></div>
+                    </div>
+                    <div class="MenuButton" onclick="$(this).HTMLSetPage(2)">
+                        <p class="unselectable MenuButtonLabel">Examen</p>
+                        <div class="DivButtonEnd"></div>
+                    </div>
+                </div>
+                <!--<div class="DivMenuTitle">
+                    <font class="MenuTitle" id="testlabel">Menu</font>
+                </div>-->
+                <br> 
+
+                <nav hidden="1">
+
+                </nav>
+            </div>
+        </div>
+        <div id="NavLinkBackground" class="NavLinkBackground noevent">
+            <div id="NavLinkPopup">
+                <div id="PopupClose">
+                    <p class="unselectable" id="PopupCloseLabel" onclick="$(this).HTMLToggleLinkPopup()">FERMER</p>
+                </div> 
+                <p class="fa PopupLabel unselectable" onclick="$(this).HTMLOpenLink('http://www.lyc-flesselles.org/')"> Site web du Lycée Jacques de Flesselles</p>
+                <p class="fa PopupLabel unselectable" onclick="$(this).HTMLOpenLink('mailto://garcin.kyllian@gmail.com')"> Envoyer un E-Mail</p>
+            </div>
+        </div>
+    </body> 
+</html>
